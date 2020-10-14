@@ -1,0 +1,24 @@
+Brain name,Time to update policy,Time since start of training,Time for last experience collection,Number of experiences used for training,Mean return
+3DBallLearning,1.919,10.367,6.035,12002,1.244
+3DBallLearning,1.849,18.999,5.851,12063,1.307
+3DBallLearning,1.848,27.526,5.776,12028,1.386
+3DBallLearning,1.887,36.141,5.799,12024,1.529
+3DBallLearning,1.866,45.046,6.108,12004,1.716
+3DBallLearning,1.865,53.568,5.761,12024,1.907
+3DBallLearning,1.917,62.251,5.817,12116,2.168
+3DBallLearning,1.933,70.898,5.804,12072,2.481
+3DBallLearning,1.967,79.884,6.063,12369,2.834
+3DBallLearning,1.992,89.555,6.651,12464,3.225
+3DBallLearning,1.992,97.616,5.232,12271,3.632
+3DBallLearning,2.012,106.503,5.940,12191,4.035
+3DBallLearning,2.138,115.405,5.871,12740,4.454
+3DBallLearning,2.038,124.463,6.053,12311,4.862
+3DBallLearning,2.110,134.580,6.951,12686,5.275
+3DBallLearning,2.010,142.982,5.541,12221,5.671
+3DBallLearning,2.130,151.837,5.832,12796,6.084
+3DBallLearning,2.168,160.442,5.571,12964,6.498
+3DBallLearning,2.223,169.274,5.739,13000,6.911
+3DBallLearning,2.068,177.749,5.557,12498,7.301
+3DBallLearning,2.058,187.519,6.668,12771,7.693
+3DBallLearning,1.980,196.041,5.663,12245,8.066
+3DBallLearning,2.019,204.431,5.494,12440,8.446
