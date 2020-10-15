@@ -714,7 +714,8 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
-    _brainsToControl: []
+    _brainsToControl:
+    - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
   maxSteps: 0
   trainingConfiguration:
     width: 600
@@ -730,12 +731,6 @@ MonoBehaviour:
     targetFrameRate: 40
   resetParameters:
     resetParameters: []
-  spawnArea: {fileID: 9139988380965288436}
-  foodPref: {fileID: 7992386686225522654, guid: 1cc749459f0ac44699410347c600a881,
-    type: 3}
-  waterPref: {fileID: 5690188196858855045, guid: 6bdd3aef2b7de4687b216ec4ed4e07c5,
-    type: 3}
-  numCubes: 5
 --- !u!1 &905941703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +1974,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
+        type: 3}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7,
+        type: 2}
     - target: {fileID: 5452035232747165405, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: m_TargetTexture
@@ -2043,6 +2044,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HRLagent
+      objectReference: {fileID: 0}
+    - target: {fileID: 7047809424978331647, guid: 32065d6ee42714a9697cf3de90ba2a9c,
+        type: 3}
+      propertyPath: m_TagString
+      value: agent
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1172806671875691564, guid: 32065d6ee42714a9697cf3de90ba2a9c, type: 3}
