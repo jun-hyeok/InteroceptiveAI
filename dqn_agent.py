@@ -7,14 +7,16 @@ import torch.nn as nn
 from collections import deque
 from typing import Optional, Deque
 
-from two_resource_dqn.replay_buffer import ReplayBuffer, Observation
-from two_resource_dqn.util import ActionType
+from replay_buffer import ReplayBuffer, Observation
+from util import ActionType
 
 
 class QNet(nn.Module):
     def __init__(self, n_images, vector_dim, n_action):
         super(QNet, self).__init__()
-        self.conv1 = nn.Conv2d(in_channels=3 * n_images, out_channels=8, kernel_size=5, stride=2)
+        self.conv1 = nn.Conv2d(
+            in_channels=3 * n_images, out_channels=8, kernel_size=5, stride=2
+        )
         self.bn1 = nn.BatchNorm2d(8)
         self.conv2 = nn.Conv2d(in_channels=8, out_channels=16, kernel_size=3, stride=1)
         self.bn2 = nn.BatchNorm2d(16)
@@ -29,7 +31,9 @@ class QNet(nn.Module):
         self.act_conv = nn.Softplus()
         self.act_fc = nn.Softplus()
 
-    def forward(self, image_tensor: torch.Tensor, vector_tensor: torch.Tensor) -> torch.Tensor:
+    def forward(
+        self, image_tensor: torch.Tensor, vector_tensor: torch.Tensor
+    ) -> torch.Tensor:
         x_im = self.act_conv(self.bn1(self.conv1(image_tensor)))
         x_im = self.act_conv(self.bn2(self.conv2(x_im)))
         x_im = x_im.flatten(start_dim=1)
@@ -41,10 +45,18 @@ class QNet(nn.Module):
 
 
 class DQNAgent:
-    """ Classical Deep Q Network Agent
-    """
+    """Classical Deep Q Network Agent"""
 
-    def __init__(self, config, n_action, action_size, shape_vector_obs, shape_obs_image, eps_start, device):
+    def __init__(
+        self,
+        config,
+        n_action,
+        action_size,
+        shape_vector_obs,
+        shape_obs_image,
+        eps_start,
+        device,
+    ):
         # Network
         self.input_time_horizon = int(config["qn"]["input_time_horizon"])
         self.action_size = action_size
@@ -53,9 +65,11 @@ class DQNAgent:
         self.n_action = n_action
         self._device = device
 
-        self.qnet = QNet(n_images=self.input_time_horizon,
-                         vector_dim=shape_vector_obs[0],
-                         n_action=n_action).to(device)
+        self.qnet = QNet(
+            n_images=self.input_time_horizon,
+            vector_dim=shape_vector_obs[0],
+            n_action=n_action,
+        ).to(device)
         # Load network if needed
         if strtobool(config["experiment"]["load_network_from_file"]) is True:
             print("-----Load Network")
@@ -63,9 +77,11 @@ class DQNAgent:
         else:
             print("---- Learn from scratch")
 
-        self.qnet_support = QNet(n_images=self.input_time_horizon,
-                                 vector_dim=shape_vector_obs[0],
-                                 n_action=n_action).to(device)
+        self.qnet_support = QNet(
+            n_images=self.input_time_horizon,
+            vector_dim=shape_vector_obs[0],
+            n_action=n_action,
+        ).to(device)
         self.qnet_support.load_state_dict(self.qnet.state_dict())
 
         # Optimization
@@ -79,7 +95,7 @@ class DQNAgent:
             params=self.qnet.parameters(),
             lr=self.learning_rate,
             eps=self.adam_eps,
-            weight_decay=float(config["dnn"]["weight_decay"])
+            weight_decay=float(config["dnn"]["weight_decay"]),
         )
 
         # Replay Buffer
@@ -112,20 +128,21 @@ class DQNAgent:
                 self._im_tensor_queue.append(im_tensor)
 
             # Construct a single observation
-            obs_now = Observation(image_seq=tuple(self._im_tensor_queue), vector=vec_tensor)
+            obs_now = Observation(
+                image_seq=tuple(self._im_tensor_queue), vector=vec_tensor
+            )
 
             # Add experience
             if None not in (self._prev_action, self._prev_observation) and not done:
                 self.replay_buffer.append(
                     observation=self._prev_observation,
                     action=self._prev_action,
-                    next_observation=obs_now
+                    next_observation=obs_now,
                 )
 
             # Get an action
             greedy_action, q_vec = self.get_greedy_action(
-                im_tensor_queue=self._im_tensor_queue,
-                vec_tensor=vec_tensor
+                im_tensor_queue=self._im_tensor_queue, vec_tensor=vec_tensor
             )
             if random.random() < self.eps_e_greedy:
                 action = random.choice(range(self.n_action))
@@ -139,7 +156,9 @@ class DQNAgent:
             self.train()
         else:
             # if self.replay_buffer.n_experience % 500 == 0:
-            print(f"Buffer : {self.replay_buffer.n_experience}/{self.replay_buffer_size}")
+            print(
+                f"Buffer : {self.replay_buffer.n_experience}/{self.replay_buffer_size}"
+            )
 
         # Copy Q net to the support network
         if self.time_tick == self.iteration:
@@ -168,21 +187,33 @@ class DQNAgent:
             1,
             self.input_time_horizon * self.shape_obs_image[2],
             self.shape_obs_image[0],
-            self.shape_obs_image[1]
+            self.shape_obs_image[1],
         )
         self._optimizer.zero_grad()
         data_batch = self.replay_buffer.get_batch_experience(batch_size=self.batch_size)
         loss = torch.zeros(1).to(self._device)
         for experience in data_batch:
             action = experience.action
-            im_tensor = torch.cat(experience.observation.image_seq, 1).view(im_size).to(self._device)
+            im_tensor = (
+                torch.cat(experience.observation.image_seq, 1)
+                .view(im_size)
+                .to(self._device)
+            )
             vec_tensor = experience.observation.vector.to(self._device)
             q_val = self.qnet(im_tensor, vec_tensor)[0][action]
 
-            next_im_tensor = torch.cat(experience.next_observation.image_seq, 1).view(im_size).to(self._device)
+            next_im_tensor = (
+                torch.cat(experience.next_observation.image_seq, 1)
+                .view(im_size)
+                .to(self._device)
+            )
             next_vec_tensor = experience.next_observation.vector.to(self._device)
-            max_next_q = self.qnet_support(next_im_tensor, next_vec_tensor)[0].max().detach()
-            reward_tensor = self.reward(vec_tensor, next_vec_tensor, action)[0].to(self._device)
+            max_next_q = (
+                self.qnet_support(next_im_tensor, next_vec_tensor)[0].max().detach()
+            )
+            reward_tensor = self.reward(vec_tensor, next_vec_tensor, action)[0].to(
+                self._device
+            )
             # print(reward_tensor.cpu().numpy())
             # print(f"q: {q_val}, r: {reward_tensor}, qnext: {max_next_q}")
 
@@ -192,15 +223,23 @@ class DQNAgent:
         loss.backward()
         self._optimizer.step()
 
-    def reward(self, vector_obs: torch.Tensor, next_vector_obs: torch.Tensor, action: int):
+    def reward(
+        self, vector_obs: torch.Tensor, next_vector_obs: torch.Tensor, action: int
+    ):
         # Shaping reward-enhanced reward
         # Assuming shaping reward with \Phi(s) = log P(s) / (1 - gamma)
-        reward = - 0.01 * next_vector_obs.pow(2.0).sum(dim=1).view(next_vector_obs.shape[0], -1)
-        reward -= - 0.01 * vector_obs.pow(2.0).sum(dim=1).view(vector_obs.shape[0], -1)
-        reward *= self._reward_discount/(1.0 - self._reward_discount)
+        reward = -0.01 * next_vector_obs.pow(2.0).sum(dim=1).view(
+            next_vector_obs.shape[0], -1
+        )
+        reward -= -0.01 * vector_obs.pow(2.0).sum(dim=1).view(vector_obs.shape[0], -1)
+        reward *= self._reward_discount / (1.0 - self._reward_discount)
 
         # Action penalty
-        if action not in (ActionType.NONE.value, ActionType.LEFT.value, ActionType.RIGHT.value):
+        if action not in (
+            ActionType.NONE.value,
+            ActionType.LEFT.value,
+            ActionType.RIGHT.value,
+        ):
             reward -= 0.001
 
         # reward = - 0.01 * vector_obs.pow(2.0).sum(dim=1).view(vector_obs.shape[0], -1)
@@ -224,16 +263,17 @@ class DQNAgent:
         return index.cpu().numpy()[0], q_val
 
     def obs_to_tensor(self, raw_observation):
-        im_tensor = torch.tensor(raw_observation[0]).view((
-            1,
-            self.shape_obs_image[2],
-            self.shape_obs_image[0],
-            self.shape_obs_image[1]
-        ))
+        im_tensor = torch.tensor(raw_observation[0]).view(
+            (
+                1,
+                self.shape_obs_image[2],
+                self.shape_obs_image[0],
+                self.shape_obs_image[1],
+            )
+        )
         vec_tensor = torch.tensor(raw_observation[1]).view(1, self.shape_vector_obs[0])
         return im_tensor, vec_tensor
 
     def save_network(self, n_experiment: int):
-        torch.save(self.qnet.state_dict(),
-                   f=f"saved_network/qnet_{n_experiment}.pth")
+        torch.save(self.qnet.state_dict(), f=f"saved_network/qnet_{n_experiment}.pth")
         print(f"Network saved in {n_experiment}-th experiment.")
