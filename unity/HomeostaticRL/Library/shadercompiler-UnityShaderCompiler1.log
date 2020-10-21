@@ -1,6 +1,60 @@
-Base path: '/home/junhyeok/Unity/Hub/Editor/2019.4.12f1/Editor/Data', plugins path '/home/junhyeok/Unity/Hub/Editor/2019.4.12f1/Editor/Data/PlaybackEngines'
+Base path: '/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents', plugins path '/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents/PlaybackEngines'
 Cmd: initializeCompiler
-Cmd: compileSnippet
-  api=15 type=0 insize=2992 outsize=3331 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
-
-Quitting shader compiler process
+Cmd: compileComputeKernel
+  api=14 insize=4443 outsize=3322 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3322 outsize=4493 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=7985 outsize=2864 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=7985 outsize=4322 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2965 outsize=3387 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=4264 outsize=2783 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3223 outsize=4567 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 14 at Tensor.cginc(112): use of potentially uninitialized variable (ReadonlyTensor::SafeGet)
+  api=14 insize=21333 outsize=4398 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=2726 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=3355 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3610 outsize=4419 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3100 outsize=3288 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2993 outsize=2913 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3052 outsize=2988 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2998 outsize=2947 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3586 outsize=4150 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3586 outsize=4154 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=2595 outsize=498 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=498 outsize=312 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 14 at Tensor.cginc(126): use of potentially uninitialized variable (ReadonlyTensor::SafeGet)
+  api=14 insize=7555 outsize=13618 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2099 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2147 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2286 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2472 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2169 outsize=2662 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2191 outsize=2703 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=4516 outsize=5989 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3883 outsize=5680 ok=1
