@@ -713,7 +713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   broadcastHub:
     broadcastingBrains:
-    - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
+    - {fileID: 11400000, guid: ce7807a1b93fd4a16935bcef8f8ebcb5, type: 2}
     _brainsToControl:
     - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
   maxSteps: 0
@@ -1910,17 +1910,17 @@ PrefabInstance:
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: maxThirst
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: thirstFalRate
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: maxHunger
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
@@ -1945,7 +1945,7 @@ PrefabInstance:
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: agentParameters.maxStep
-      value: 100000
+      value: 10000
       objectReference: {fileID: 0}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
@@ -1978,13 +1978,28 @@ PrefabInstance:
         type: 3}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7,
+      objectReference: {fileID: 11400000, guid: ce7807a1b93fd4a16935bcef8f8ebcb5,
         type: 2}
+    - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
+        type: 3}
+      propertyPath: thirstFallRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
+        type: 3}
+      propertyPath: hungerFallRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5452035232747165405, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 1b122564edc7447a6b8068edc871e10e, type: 2}
+    - target: {fileID: 7047809424978331632, guid: 32065d6ee42714a9697cf3de90ba2a9c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7047809424978331633, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: m_LocalPosition.x
