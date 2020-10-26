@@ -9,9 +9,9 @@ public class ItemProperties : MonoBehaviour
     public GameObject spawnee;
     float screenX, screenZ;
 
-    [SerializeField] private bool food;
-    [SerializeField] private bool water;
-    [SerializeField] private float value;
+    [SerializeField] private bool food = false;
+    [SerializeField] private bool water = false;
+    [SerializeField] private float value = 0;
 
     public void Ineration(out bool foodbool, out bool waterbool, out float Val, out GameObject cube)
     {
