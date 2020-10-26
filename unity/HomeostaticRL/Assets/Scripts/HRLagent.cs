@@ -23,8 +23,8 @@ public class HRLagent : Agent
     public float rotateSpeed = 4f;
 
     //Gravity Setting
-    [Header("Gravity Settings")] 
-    public float gravity = -9.81f; 
+    [Header("Gravity Settings")]
+    public float gravity = -9.81f;
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -85,7 +85,7 @@ public class HRLagent : Agent
     }
 
     //For player to see
-    void CrosshairActive(bool active=true)
+    void CrosshairActive(bool active = true)
     {
         if (active)
         {
@@ -96,7 +96,7 @@ public class HRLagent : Agent
             crossHair.color = Color.white;
         }
     }
-    
+
     private void Awake()
     {
         // Disable auto update of the physics engine.
@@ -199,12 +199,14 @@ public class HRLagent : Agent
 
         //Move, Rotation action
         transform.Rotate(Vector3.up * verticalInput * rotateSpeed); //playerBody
-        Vector3 move = transform.forward * horizontalInput;
-        controller.Move(move * moveSpeed * Time.deltaTime);
-
+        if (horizontalInput > 0)
+        {
+            Vector3 move = transform.forward * horizontalInput;
+            controller.Move(move * moveSpeed * Time.deltaTime);
+        }
         //Raycasting for detecting collision with cubes and eat it
         RaycastHit hit;
-        Vector3 fwd  = transform.TransformDirection(Vector3.forward);
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
 
         //Drawing Raycast blue line to see
         Debug.DrawRay(transform.position, fwd * rayLength, Color.blue, 0.3f);
@@ -235,7 +237,7 @@ public class HRLagent : Agent
                         hungerSlider.value += value;
                     }
                     else if (waterbool)
-                    {   
+                    {
                         thirstSlider.value += value;
                     }
                     cubes.Add(cube);
@@ -256,7 +258,7 @@ public class HRLagent : Agent
         {
             Debug.Log("Done!");
             AddReward(-1f);
-            Done(); 
+            Done();
         }
     }
 
