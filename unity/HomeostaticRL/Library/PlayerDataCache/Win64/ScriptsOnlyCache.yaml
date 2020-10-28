@@ -97,6 +97,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12080}
     - Class: 114
+      Script: {instanceID: 12628}
+    - Class: 114
       Script: {instanceID: 12646}
     - Class: 114
       Script: {instanceID: 13014}
@@ -691,7 +693,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: e25894620492a07e33f3267d45a864f8
+      Hash: 0828313448dd3c126a0c9d6290be5b9e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HRLagent

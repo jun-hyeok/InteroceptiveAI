@@ -715,7 +715,8 @@ MonoBehaviour:
     broadcastingBrains:
     - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
     - {fileID: 11400000, guid: ce7807a1b93fd4a16935bcef8f8ebcb5, type: 2}
-    _brainsToControl: []
+    _brainsToControl:
+    - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
   maxSteps: 0
   trainingConfiguration:
     width: 600
@@ -1870,7 +1871,7 @@ PrefabInstance:
     - target: {fileID: 4459653871914306828, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4459653871914306828, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
@@ -1988,7 +1989,7 @@ PrefabInstance:
         type: 3}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 11400000, guid: ce7807a1b93fd4a16935bcef8f8ebcb5,
+      objectReference: {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7,
         type: 2}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
