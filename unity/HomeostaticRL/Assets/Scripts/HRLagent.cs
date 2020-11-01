@@ -128,6 +128,9 @@ public class HRLagent : Agent
 
         // Gravity Implementation
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        // if (controller.isGrounded){
+        //     Debug.Log("Grounded");
+        // }
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -193,17 +196,17 @@ public class HRLagent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        float horizontalInput = vectorAction[0];
-        float verticalInput = vectorAction[1];
+        float verticalInput = vectorAction[0];
+        float horizontalInput = vectorAction[1];
         float eatInput = vectorAction[2];
 
         //Move, Rotation action
-        transform.Rotate(Vector3.up * verticalInput * rotateSpeed); //playerBody
-        if (horizontalInput > 0)
-        {
-            Vector3 move = transform.forward * horizontalInput;
-            controller.Move(move * moveSpeed * Time.deltaTime);
+        Vector3 move = transform.forward * verticalInput;
+        controller.Move(move * moveSpeed * Time.deltaTime);
+        if (verticalInput==0){
+            transform.Rotate(Vector3.up * horizontalInput * rotateSpeed); //playerBody
         }
+        
         //Raycasting for detecting collision with cubes and eat it
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
@@ -273,7 +276,7 @@ public class HRLagent : Agent
             DestroyImmediate(cube.gameObject);
         }
         cubes.Clear();
-        transform.position = spawnArea.position; // 왜 안될까??
+        transform.position = spawnArea.position;
         InitializeAgent();
     }
 
