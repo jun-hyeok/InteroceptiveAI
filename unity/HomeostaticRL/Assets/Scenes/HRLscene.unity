@@ -715,8 +715,7 @@ MonoBehaviour:
     broadcastingBrains:
     - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
     - {fileID: 11400000, guid: ce7807a1b93fd4a16935bcef8f8ebcb5, type: 2}
-    _brainsToControl:
-    - {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7, type: 2}
+    _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
     width: 600
@@ -1989,12 +1988,12 @@ PrefabInstance:
         type: 3}
       propertyPath: brain
       value: 
-      objectReference: {fileID: 11400000, guid: e53ff7f0446354695819bdbcef4ebda7,
+      objectReference: {fileID: 11400000, guid: ce7807a1b93fd4a16935bcef8f8ebcb5,
         type: 2}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: thirstFallRate
-      value: 1
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4702149156634791208, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
@@ -2159,6 +2158,11 @@ PrefabInstance:
     - target: {fileID: 9139988380623029628, guid: 3b417470db8f042f1a08e39a9ab24438,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9139988380623029630, guid: 3b417470db8f042f1a08e39a9ab24438,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
