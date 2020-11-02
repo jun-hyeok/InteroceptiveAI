@@ -196,14 +196,17 @@ public class HRLagent : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        float verticalInput = vectorAction[0];
-        float horizontalInput = vectorAction[1];
-        float eatInput = vectorAction[2];
+        float forwardInput = vectorAction[0];
+        float leftInput = vectorAction[1];
+        float rightInput = vectorAction[2];
+        float eatInput = vectorAction[3];
+        float noneInput = vectorAction[4];
+        float horizontalInput = rightInput - leftInput;
 
         //Move, Rotation action
-        Vector3 move = transform.forward * verticalInput;
+        Vector3 move = transform.forward * forwardInput;
         controller.Move(move * moveSpeed * Time.deltaTime);
-        if (verticalInput==0){
+        if (forwardInput==0){
             transform.Rotate(Vector3.up * horizontalInput * rotateSpeed); //playerBody
         }
         

@@ -15,16 +15,18 @@ MonoBehaviour:
   brainParameters:
     vectorObservationSize: 2
     numStackedVectorObservations: 4
-    vectorActionSize: 03000000
+    vectorActionSize: 0300000003000000030000000300000003000000
     cameraResolutions:
     - width: 84
       height: 84
       blackAndWhite: 0
     vectorActionDescriptions:
     - Horizontal
-    - Vertical
-    - Jump
-    vectorActionSpaceType: 1
+    - Horizontal
+    - Horizontal
+    - Horizontal
+    - Horizontal
+    vectorActionSpaceType: 0
   keyContinuousPlayerActions: []
   axisContinuousPlayerActions:
   - axis: Vertical
@@ -36,4 +38,19 @@ MonoBehaviour:
   - axis: Jump
     index: 2
     scale: 1
-  discretePlayerActions: []
+  discretePlayerActions:
+  - key: 273
+    branchIndex: 0
+    value: 5
+  - key: 276
+    branchIndex: 1
+    value: 5
+  - key: 275
+    branchIndex: 2
+    value: 5
+  - key: 32
+    branchIndex: 3
+    value: 1
+  - key: 0
+    branchIndex: 4
+    value: 1
