@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{F5BF37F0-102A-F8A3-2BB5-D87DF9FC6390}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/HRLagent.cs">
+    <Files>
+      <File FileName="Assets/Scripts/HRLagent.cs" Line="69" Column="33" />
+      <File FileName="Assets/Scripts/HRLacademy.cs" />
+      <File FileName="Assets/Scripts/ItemProperties.cs" />
+      <File FileName="Assets/Scripts/AgentFollowCamera.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="HomeostaticRL" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="ML-Agents" expanded="True">
+                <Node name="Examples" expanded="True">
+                  <Node name="3DBall" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                  <Node name="GridWorld" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="HRLagent.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="7357cb65-becd-40bc-a19c-712c01144520" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
