@@ -1,0 +1,46 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1603856688",
+        "python_version": "3.7.9 (default, Aug 31 2020, 07:22:35) \n[Clang 10.0.0 ]",
+        "command_line_arguments": "/Users/hyebinkim/opt/anaconda3/envs/ml-agents-1.0.2/bin/mlagents-learn /Users/hyebinkim/Dropbox/github/InteroceptiveAI/ML-Agents/ml-agents-release_2/config/trainer_config.yaml --run-id test_1028_1245",
+        "mlagents_version": "0.16.0",
+        "mlagents_envs_version": "0.16.0",
+        "communication_protocol_version": "1.0.0",
+        "tensorflow_version": "2.3.1",
+        "end_time_seconds": "1603856688"
+    },
+    "total": 0.01886826599999969,
+    "count": 1,
+    "self": 0.0007022309999999976,
+    "children": {
+        "run_training.setup": {
+            "total": 0.007116464999999739,
+            "count": 1,
+            "self": 0.007116464999999739
+        },
+        "TrainerController.start_learning": {
+            "total": 0.011049569999999953,
+            "count": 1,
+            "self": 0.0018949029999992817,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 0.008993543000000326,
+                    "count": 1,
+                    "self": 0.008993543000000326
+                },
+                "trainer_threads": {
+                    "total": 1.3519999999545007e-06,
+                    "count": 1,
+                    "self": 1.3519999999545007e-06
+                },
+                "TrainerController._save_model": {
+                    "total": 0.00015977200000039105,
+                    "count": 1,
+                    "self": 0.00015977200000039105
+                }
+            }
+        }
+    }
+}
