@@ -1,6 +1,6 @@
-unity/HomeostaticRL/Logs/
 *.zip
-
+summaries/*
+models/*
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,unity,jupyternotebooks,python,csharp
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,unity,jupyternotebooks,python,csharp
 
@@ -19,8 +19,12 @@ __pycache__/
 
 ### Unity ###
 # This .gitignore file should be placed at the root of your Unity project directory
-/[Tt]emp/
-
+unity/*/[Tt]emp/
+unity/*/[Ll]ogs/
+unity/*/[Oo]bj/
+unity/*/[Bb]uild/
+unity/*/[Bb]uilds/
+UnitySDK.log
 
 ### VisualStudioCode ###
 .vscode/*
