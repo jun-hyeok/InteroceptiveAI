@@ -11,7 +11,7 @@ public class ItemProperties : MonoBehaviour
 
     [SerializeField] private bool food = false;
     [SerializeField] private bool water = false;
-    [SerializeField] private float value = 0;
+    [SerializeField] private float value = 10;
 
     public void Ineration(out bool foodbool, out bool waterbool, out float Val, out GameObject cube)
     {

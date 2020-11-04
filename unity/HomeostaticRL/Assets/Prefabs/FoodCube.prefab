@@ -126,8 +126,6 @@ MonoBehaviour:
   spawnArea: {fileID: 9139988380623029628, guid: 3b417470db8f042f1a08e39a9ab24438,
     type: 3}
   spawnee: {fileID: 7992386686225522654}
-  foodV: 10
-  waterV: 10
   food: 1
   water: 0
-  value: 10
+  value: 30

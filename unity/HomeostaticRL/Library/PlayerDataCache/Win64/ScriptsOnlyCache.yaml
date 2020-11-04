@@ -6,39 +6,22 @@ ScriptsOnlyBuild:
     - HRLacademy
     - HRLagent
     - ItemProperties
+    - MLAgents.InferenceBrain.NNModel
     - MLAgents.LearningBrain
     - MLAgents.PlayerBrain
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
-    - UnityEditor.Experimental.TerrainAPI.BridgeTool
-    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
-    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
-    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
-    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
-    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
-    - UnityEditor.Experimental.TerrainAPI.PaintHolesTool
-    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
-    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
-    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
-    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
-    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
-    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
-    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
-    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
-    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -105,35 +88,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12104}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 12310}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 12690}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 13372}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 13754}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 13792}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13886}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13976}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 13994}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 14306}
+      Script: {instanceID: 13258}
     - Class: 114
-      Script: {instanceID: 14472}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 14512}
+      Script: {instanceID: 13742}
+    - Class: 114
+      Script: {instanceID: 13782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128

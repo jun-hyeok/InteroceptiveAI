@@ -27,5 +27,5 @@ MonoBehaviour:
     - Jump
     - None
     vectorActionSpaceType: 0
-  model: {fileID: 0}
+  model: {fileID: -9030089877650858317, guid: 3374f075f7e6bcb47ba066c1521d116e, type: 3}
   inferenceDevice: 0
