@@ -21,11 +21,11 @@ MonoBehaviour:
       height: 84
       blackAndWhite: 0
     vectorActionDescriptions:
-    - Horizontal
-    - Horizontal
-    - Horizontal
-    - Horizontal
-    - Horizontal
+    - Vertical
+    - Left
+    - Right
+    - Consume
+    - None
     vectorActionSpaceType: 0
   keyContinuousPlayerActions: []
   axisContinuousPlayerActions:

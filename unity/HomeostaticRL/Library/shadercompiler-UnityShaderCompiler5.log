@@ -1,0 +1,56 @@
+Base path: '/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents', plugins path '/Applications/Unity/Hub/Editor/2019.4.9f1/Unity.app/Contents/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=7985 outsize=2973 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3159 outsize=3770 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=4264 outsize=2783 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2783 outsize=3776 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=3118 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=2740 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=2774 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=2850 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=21333 outsize=3351 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3722 outsize=4965 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3038 outsize=3002 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2990 outsize=2913 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3416 outsize=3638 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3586 outsize=4154 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1188 outsize=1116 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=3566 outsize=4431 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2305 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2161 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=14905 outsize=2129 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2172 outsize=2662 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2217 outsize=2743 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2223 outsize=2810 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2182 outsize=2531 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=2502 outsize=3084 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=8440 outsize=16406 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=1759 outsize=4178 ok=1
+Cmd: compileSnippet
+  api=14 type=1 insize=41108 outsize=13949 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
