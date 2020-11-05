@@ -2021,6 +2021,11 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 1b122564edc7447a6b8068edc871e10e, type: 2}
+    - target: {fileID: 5452035232747165405, guid: 32065d6ee42714a9697cf3de90ba2a9c,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 7047809424978331632, guid: 32065d6ee42714a9697cf3de90ba2a9c,
         type: 3}
       propertyPath: m_Enabled
