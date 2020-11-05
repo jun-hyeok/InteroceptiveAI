@@ -210,6 +210,12 @@ public class HRLagent : Agent
             transform.Rotate(Vector3.up * horizontalInput * rotateSpeed); //playerBody
         }
         
+        //Action penalty
+        if (System.Convert.ToBoolean(forwardInput)||System.Convert.ToBoolean(eatInput)){
+            AddReward(-0.001f);
+            Debug.Log("ActionPenalty");
+        }
+
         //Raycasting for detecting collision with cubes and eat it
         RaycastHit hit;
         Vector3 fwd = transform.TransformDirection(Vector3.forward);
