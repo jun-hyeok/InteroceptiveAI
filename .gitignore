@@ -1,6 +1,7 @@
 *.zip
 summaries/*
 models/*
+ml-agents-0.8.1/
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,unity,jupyternotebooks,python,csharp
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,unity,jupyternotebooks,python,csharp
 
