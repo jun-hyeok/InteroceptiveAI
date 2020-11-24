@@ -10,7 +10,7 @@ import tensorflow.contrib.slim as slim
 
 #This is a simple function to reshape our game frames.
 def processState(state1):
-    return np.reshape(state1,[42336]) #84*84*6
+    return np.reshape(state1,[21168]) # 84*84*3
     
 #These functions allows us to update the parameters of our target network with those of the primary network.
 def updateTargetGraph(tfVars,tau):
