@@ -22,8 +22,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
-    Unity.Timeline.Editor.dll:
-    - TimelineProjectSettings
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -987,4 +985,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/HRLscene.unity
-  playerPath: /home/junhyeok/InteroceptiveAI/env_linux/H.x86_64
+  playerPath: C:/Users/junhyeok/Documents/InteroceptiveAI/env_linux/HomeostaticRL.x86_64
