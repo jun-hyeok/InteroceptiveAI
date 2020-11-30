@@ -21,6 +21,7 @@ public class HRLagent : Agent
     public CharacterController controller;
     public float moveSpeed = 12f;
     public float rotateSpeed = 4f;
+    public Vector3 initialPosition;
 
     //Gravity Setting
     [Header("Gravity Settings")]
@@ -102,7 +103,7 @@ public class HRLagent : Agent
         // Disable auto update of the physics engine.
         // Otherwise image rendering is not done every tick
         Physics.autoSimulation = false;
-
+        
         // Enable Frame rate control. If you use VR, this is ignored.
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = (int)(60.0 * Time.timeScale);
@@ -286,6 +287,11 @@ public class HRLagent : Agent
         }
         cubes.Clear();
         transform.position = spawnArea.position;
+        Vector3 relativePos = spawnArea.transform.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(relativePos);
+        transform.rotation = rotation;
+        // transform.LookAt(Vector3.zero);
+        transform.position = initialPosition;
         InitializeAgent();
     }
 

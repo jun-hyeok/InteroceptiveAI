@@ -13,15 +13,31 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TerrainTools.Editor.dll:
     - UnityEditor.Experimental.TerrainAPI.BillowNoise
+    - UnityEditor.Experimental.TerrainAPI.BridgeTool
+    - UnityEditor.Experimental.TerrainAPI.CloneBrushTool
+    - UnityEditor.Experimental.TerrainAPI.ContrastTool
     - UnityEditor.Experimental.TerrainAPI.FbmFractalType
+    - UnityEditor.Experimental.TerrainAPI.MeshStampTool
     - UnityEditor.Experimental.TerrainAPI.NoiseBlitShaderGenerator
     - UnityEditor.Experimental.TerrainAPI.NoiseFillShaderGenerator
+    - UnityEditor.Experimental.TerrainAPI.NoiseHeightTool
     - UnityEditor.Experimental.TerrainAPI.NoneFractalType
+    - UnityEditor.Experimental.TerrainAPI.PaintHeightTool
+    - UnityEditor.Experimental.TerrainAPI.PaintHolesTool
+    - UnityEditor.Experimental.TerrainAPI.PaintTextureTool
     - UnityEditor.Experimental.TerrainAPI.PerlinNoise
     - UnityEditor.Experimental.TerrainAPI.RidgeNoise
+    - UnityEditor.Experimental.TerrainAPI.SetHeightTool
+    - UnityEditor.Experimental.TerrainAPI.SharpenPeaksTool
+    - UnityEditor.Experimental.TerrainAPI.SlopeFlattenTool
+    - UnityEditor.Experimental.TerrainAPI.SmoothHeightTool
+    - UnityEditor.Experimental.TerrainAPI.StampTool
     - UnityEditor.Experimental.TerrainAPI.StrataFractalType
+    - UnityEditor.Experimental.TerrainAPI.TerraceErosion
+    - UnityEditor.Experimental.TerrainAPI.ThermalErosionTool
     - UnityEditor.Experimental.TerrainAPI.ValueNoise
     - UnityEditor.Experimental.TerrainAPI.VoronoiNoise
+    - UnityEditor.Experimental.TerrainAPI.WindErosionTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -82,37 +98,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11358}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11568}
+      Script: {instanceID: 11562}
     - Class: 114
-      Script: {instanceID: 11616}
+      Script: {instanceID: 11610}
     - Class: 114
-      Script: {instanceID: 11952}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12090}
+      Script: {instanceID: 12084}
     - Class: 114
-      Script: {instanceID: 12378}
+      Script: {instanceID: 12372}
     - Class: 114
-      Script: {instanceID: 12638}
+      Script: {instanceID: 12632}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 13024}
+      Script: {instanceID: 13018}
     - Class: 114
-      Script: {instanceID: 13062}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13154}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 13262}
+      Script: {instanceID: 13258}
     - Class: 114
-      Script: {instanceID: 13574}
+      Script: {instanceID: 13570}
     - Class: 114
-      Script: {instanceID: 13746}
+      Script: {instanceID: 13742}
     - Class: 114
-      Script: {instanceID: 13786}
+      Script: {instanceID: 13782}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -690,7 +706,7 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 0828313448dd3c126a0c9d6290be5b9e
+      Hash: 35cf8b1111565f023908400f588ca60c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HRLagent
@@ -985,4 +1001,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/HRLscene.unity
-  playerPath: C:/Users/junhyeok/Documents/InteroceptiveAI/env_linux/HomeostaticRL.x86_64
+  playerPath: C:/Users/junhyeok/Documents/InteroceptiveAI/envs/HomeostaticRL.x86_64
