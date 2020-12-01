@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/ML-Agents/Examples/FoodCollector/Scenes/FoodCollector.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0

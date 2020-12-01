@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - pit
+  - target
+  - ground
+  - agent
+  - wall
+  - badBanana
+  - banana
+  - iWall
+  - block
+  - goal
+  - redGoal
+  - orangeGoal
+  - redBlock
+  - orangeBlock
+  - walkableSurface
+  - blueAgent
+  - blueGoal
+  - ball
+  - switchOff
+  - pyramid
+  - stone
+  - Consumable
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Interect
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
