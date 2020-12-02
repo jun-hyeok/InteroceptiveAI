@@ -2,7 +2,7 @@
 summaries/*
 models/*
 ml-agents-0.8.1/
-
+UnitySDK.log
 .DS_Store
 
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode
